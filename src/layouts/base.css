@@ -51,7 +51,13 @@ p {
   background: #fff;
   grid-column-start: 3;
   grid-column-end: 11;
-  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.index-wrapper {
+  background: #fff;
+  grid-column-start: 2;
+  grid-column-end: 12;
   padding: 0 2rem;
 }
 

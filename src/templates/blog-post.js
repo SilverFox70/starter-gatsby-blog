@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import get from 'lodash/get'
-import Img from 'gatsby-image'
+import React from 'react';
+import Helmet from 'react-helmet';
+import get from 'lodash/get';
+import Img from 'gatsby-image';
 
-import heroStyles from '../components/hero.module.css'
+import heroStyles from '../components/hero.module.css';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div style={{ background: '#fff' }}>
+      <div className='background'>
         <Helmet title={`${post.title} | ${siteTitle}`} />
         <div className={heroStyles.hero}>
           <Img className={heroStyles.heroImage} alt={post.title} sizes={post.heroImage.sizes} />
@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -55,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
